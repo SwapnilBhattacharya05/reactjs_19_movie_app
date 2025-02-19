@@ -14,6 +14,8 @@ const API_OPTIONS = {
   },
 };
 
+import { Analytics } from "@vercel/analytics/react";
+
 const App = () => {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -129,6 +131,7 @@ const App = () => {
           )}
         </section>
       </div>
+      <Analytics />
     </main>
   );
 };
